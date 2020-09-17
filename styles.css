@@ -18,7 +18,7 @@ body {
 
 #navigation li a {
   color: #EAE4D3;
-  font-size: 1.3em;
+  font-size: 1.1vmax;
   text-decoration: none;
 }
 
@@ -30,13 +30,13 @@ body {
 
 .carousel-caption {
   font-weight: 700;
-  top: 50% !important;
+  top: 50%;
   transform: translateY(-50%);
-  bottom: initial;
+  
   }
 
   .carousel {
-  font-size: 1.3em;
+  font-size: 1.3vmax;
   position: fixed;
   width:100%;
  }
@@ -44,11 +44,11 @@ body {
  .Titu{
   color: red;
   font-weight: 900;
-  font-size: 5.3em;
+  font-size: 5.3vmax;
   font-family: "Kanit", sans-serif;
  }
  p{
-  font-size: 1.7em !important;
+  font-size: 1.7vmax ;
   color: #EAE4D3;
   font-weight: 600;
   font-family: "Kanit", sans-serif;
@@ -111,7 +111,22 @@ div.vertical-line{
     You can instead use position:absolute or display:inline-block
     if this fits better with your design */
 }
-.png {
-  width: 100%;
-  height: auto;
+ .Icon{
+  padding-top: .5vmax;
+  position: relative;
+  max-width: 60%;
+  height:auto;
+ }
+ 
+@media only screen and (max-width: 700px) {
+  .Icon {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Icon {
+    width: 100%;
+  }
 }
