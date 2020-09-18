@@ -32,11 +32,9 @@ body {
   font-weight: 700;
   top: 50%;
   transform: translateY(-50%);
-  
   }
 
   .carousel {
-  font-size: 1.3vmax;
   position: fixed;
   width:100%;
  }
@@ -47,16 +45,25 @@ body {
   font-size: 5.3vmax;
   font-family: "Kanit", sans-serif;
  }
- p{
+ .pwhite{
   font-size: 1.7vmax ;
-  color: #EAE4D3;
-  font-weight: 600;
+  color: whitesmoke;
   font-family: "Kanit", sans-serif;
+  font-weight: 400;
  }
-
- * {
-  box-sizing: border-box;
-}
+ .pblack{
+  font-size: 1.5vmax ;
+  color: #201F17;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 25%;
+ }
+ .Us{
+   font-size: 1.5em;
+   text-align: left;
+   padding-left: 25%;
+ }
 
 /* Style the search field */
 form.example input[type=text] {
@@ -93,34 +100,39 @@ form.example button:hover {
   background: #EAE4D3;
   margin-right: auto;
   margin-left: auto;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
 }
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
 }
 
+div.col-lg-{
+  font-size: 300%;
+}
 .color-back {
   background-color: red;
 }
 
-div.vertical-line{
-  width: 2px;
-  background-color:#262618; /* Line color */
-  height: 50%; /* Override in-line if you want specific height. */
-  float: right; /* Causes the line to float to left of content. 
-    You can instead use position:absolute or display:inline-block
-    if this fits better with your design */
-}
- .Icon{
-  padding-top: .5vmax;
+
+.Icon{
+  padding-top: 1.2vmax;
   position: relative;
-  max-width: 60%;
+  max-width: 70%;
   height:auto;
  }
  
-@media only screen and (max-width: 700px) {
+
+
+ @media only screen and (max-width: 700px) {
   .Icon {
-    width: 49.99999%;
+    width: 50%;
     margin: 6px 0;
   }
 }
@@ -128,5 +140,208 @@ div.vertical-line{
 @media only screen and (max-width: 500px) {
   .Icon {
     width: 100%;
+  }
+}
+.responsive {
+  float: left;
+  width:100%;
+}
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 3%;
+  right:0;
+  background-color: #7c5a3ea2;
+  overflow: hidden;
+  width: 25%;
+  height:0;
+  transition: .5s ease;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:500px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+.header {
+  text-align: center;
+  padding: 32px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.page-link{
+  background-color: #9f6e595e !important;
+  color:black !important;
+}
+
+.enter{
+  padding-top: 3vmax;
+  padding-bottom: 3vmax;
+  width: 100%;
+}
+footer{
+  background-color:#201F17  ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.info{
+  float: right;
+  position: absolute;
+}
+
+.aligned { 
+  display: flex; 
+  align-items: center; 
+} 
+ 
+span { 
+  padding: 10px; 
+} 
+.imaP{
+  width:50%;
+}
+.un-paddin{
+  padding-left: 25%;
+}
+.pagination{
+  width: 100%!important;
+}
+@media only screen and (max-width: 200px){
+  .pagination {
+    width: 20% !important;
   }
 }
